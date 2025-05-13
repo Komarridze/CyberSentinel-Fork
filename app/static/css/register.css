@@ -1,0 +1,70 @@
+/* Register Page Styling */
+.register-container
+{
+    width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.register-container h2
+{
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.input-group
+{
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label
+{
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.input-group input, .input-group select
+{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #eee;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus, .input-group select:focus
+{
+    border-color: var(--cta-bg);
+}
+
+.error-message
+{
+    color: red;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.login-link
+{
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.login-link a
+{
+    color: var(--cta-bg);
+    text-decoration: none;
+}
+
+.login-link a:hover
+{
+    text-decoration: underline;
+}

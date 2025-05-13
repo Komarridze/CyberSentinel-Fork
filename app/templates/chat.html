@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Support - Cyber Sentinel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}" />
+  </head>
+  <body>
+    <div class="chat-container">
+      <!-- Sidebar: List of conversations -->
+      <aside class="sidebar">
+        <h2>Conversations</h2>
+        <ul class="conversation-list">
+          <li class="conversation active">New Conversation</li>
+          <!-- Future conversation items could be added here -->
+        </ul>
+        <button class="new-conversation">+ New Conversation</button>
+      </aside>
+
+      <!-- Main Chat Area -->
+      <main class="chat-main">
+        <div class="message-area" id="message-area">
+          <!-- Chat messages will be appended here -->
+        </div>
+        <div class="input-area">
+          <textarea id="message-input" placeholder="Send a message..."></textarea>
+          <button id="send-button">Send</button>
+        </div>
+      </main>
+    </div>
+
+    <!-- Socket.IO library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <!-- Chat handling JS -->
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+  </body>
+</html>

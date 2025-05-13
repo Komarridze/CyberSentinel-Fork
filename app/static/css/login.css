@@ -1,0 +1,92 @@
+/* Main Container */
+.container, main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Login Page Styling */
+.login-container {
+    width: 400px;
+    margin: 80px auto;
+    background-color: #555;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    font-size: 16px;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: var(--);
+}
+
+.login-container label {
+    display: block;
+    margin: 15px 0 5px 5px;
+    color: #ccc;
+}
+
+.login-container input {
+    width: 92%;
+    padding: 10px;
+    margin: 5px 15px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #333;
+    color: #eee;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.login-container input:focus {
+    border-color: #5cb85c;
+    box-shadow: 0 0 5px rgba(92, 184, 92, 0.5);
+    outline: none;
+}
+
+.login-container button {
+    width: 92%;
+    padding: 12px;
+    margin: 25px 15px;
+    background-color: #5cb85c;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #489e48;
+    box-shadow: 0 4px 8px #5c855c;
+}
+
+/* Flash Messages */
+.flash-message {
+    margin-top: 20px;
+    background-color: #d9534f;
+    padding: 10px;
+    border-radius: 3px;
+    text-align: center;
+    color: #fff;
+}
+
+.register-link
+{
+    margin-top: 15px;
+    text-align: center;
+    display: block;
+}
+
+.register-link a 
+{
+    color: #489e48;
+}

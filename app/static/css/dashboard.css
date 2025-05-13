@@ -1,0 +1,126 @@
+/* Dashboard Styling */
+#dashboard {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.search-bar-container
+{
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+#search-form
+{
+    width: 100%;
+    display: flex;
+}
+
+#search-form input[type="text"]
+{
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #444;
+    border-radius: 4px 0 0 4px;
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#search-form input[type="text"]:focus
+{
+    border-color: var(--cta-bg);
+    box-shadow: 0 0 5px rgba(92, 184, 92, 0.5);
+}
+
+#search-form button
+{
+    padding: 10px 20px;
+    border: 1px solid #444;
+    border-left: none;
+    background-color: var(--cta-bg);
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#search-form button:hover
+{
+    background-color: var(--cta-hover);
+}
+
+/* Filter Controls */
+#filter-controls input,
+#filter-controls select,
+#filter-controls button {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #1e1e1e;
+    color: #eee;
+}
+
+#filter-controls button {
+    background-color: #5cb85c;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#filter-controls button:hover {
+    background-color: #489e48;
+}
+
+/* Actions */
+#actions button,
+#actions a {
+    margin: 10px;
+    padding: 10px 15px;
+    background-color: #444;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Error Notifications */
+#error {
+    background-color: #f44336;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+/* Log Table and Viewer */
+tr.error {
+    background-color: #ffb3b3;
+}
+
+tr.warning {
+    background-color: #ffe0b3;
+}
+
+#log-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#log-table th, #log-table td {
+    border: 1px solid #555;
+    padding: 8px;
+    text-align: left;
+}
+
+#log-viewer {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 20px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}"/>
+    <!-- Include Socket.IO from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.min.js"></script>
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Cyber Sentinel Dashboard</title>
+</head>
+<body>
+    <div id="dashboard">
+        <h1>Cyber Sentinel Dashboard</h1>
+
+        <!-- FIlter Controls -->
+        <div id="filter-controls">
+            <input type="text" id="keyword" placeholder="Keyword">
+            <select id="log-level">
+                <option value="">All Levels</option>
+                <option value="INFO">INFO</option>
+                <option value="WARNING">WARNING</option>
+                <option value="ERROR">ERROR</option>
+            </select>
+            <input type="date" id="start_date">
+            <input type="date" id="end_date">
+            <button id="apply-filters">Apply Filters</button>
+            <button id="save-filter">Save Filter Preset</button>
+        </div>
+
+        <!-- Action Buttons -->
+        <div id="actions">
+            <button id="pause-btn">Pause</button>
+            <!-- The Export button simply links to the export endpoint -->
+            <a id="export-btn" href="/api/export_logs" download>Export Logs</a>
+        </div>
+
+        <div class="search-bar-container">
+            <form id="search-form" action="{{ url_for('main.dashboard') }}" method="GET">
+                <input type="text" name="q" placeholder="Search logs..." />
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <!-- Log Summary -->
+        <div id="log-summary">
+            <p>Total Logs: <span id="total-logs">0</span></p>
+            <p>Errors: <span id="error-count">0</span></p>
+        </div>
+
+        <!-- Log Viewer -->
+        <div id="log-viewer">
+            <table id="log-table">
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Level</th>
+                        <th>Agent</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Charts & Analytics -->
+        <div id="charts">
+            <canvas id="logChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <!-- Include Socket.IO and Dashboard JavaScript -->
+    <script src="{{ url_for('static', filename='js/socketio_cleint.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/searchInput.js') }}"></script>
+</body>
+</html>
