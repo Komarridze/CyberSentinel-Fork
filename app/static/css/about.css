@@ -13,10 +13,10 @@
     font-size: 2.5rem;
     margin-bottom: 20px;
     margin-top: 10px;
-    color: var(--text-color);
     text-align: center;
     border-bottom: 2px solid #5cb85c;
     padding-bottom: 10px;
+    color: var(--text-color);
 }
 
 .about-container p {
@@ -35,9 +35,9 @@
     font-size: 1.8rem;
     margin-bottom: 15px;
     padding-top: 20px;
-    color: #5cb85c;
     text-transform: uppercase;
     letter-spacing: 0.05rem;
+    color: #5cb85c;
 }
 
 .about-section p {

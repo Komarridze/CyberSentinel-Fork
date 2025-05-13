@@ -35,6 +35,7 @@ def register():
         email = request.form.get('email')
         role = request.form.get('role', 'viewer')
         
+        password = generate_password_hash(password=password, salt_length=10)
         # Check if user already exists
         existing_user = User.query.filter_by(email=email).first()
         if existing_user:

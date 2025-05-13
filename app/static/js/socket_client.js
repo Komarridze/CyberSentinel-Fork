@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () =>
             <td>${log.timestamp}</td>
             <td>${log.level}</td>
             <td>${log.agent}</td>
-            <td>${log.message}</td>
-        `;
+            <td>${log.message}</td> 
+        `; //!!!!! UNSECURE FIX THIS PLEASE
 
         // Insert new entries at the top for immediacy
         logTableBody.prepend(row);

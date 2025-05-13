@@ -1,6 +1,6 @@
 import os 
 import openai
-from flask import Blueprint, render_template, session, request
+from flask import Blueprint, render_template, session
 from flask_socketio import emit
 from app import socketio
 
@@ -28,7 +28,7 @@ def get_ai_reply(prompt, conversation=None,
     messages.append({"role": "user", "content": prompt})
     
     try:
-        response = openai.ChatCompletion.create(
+        response = openai.chat.completions.create(
             model=model,
             messages=messages,
             temperature=temperature,
